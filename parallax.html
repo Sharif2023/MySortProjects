@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en,bn">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Scenic beauty of Bangladesh</title>
+        <style>
+            html{
+                height: 100%;
+                overflow: hidden;
+            }
+            body{
+                color: #fff;
+                margin: 0;
+                padding: 0;
+                perspective: 1px;
+                transform-style: preserve-3d;
+                height: 100%;
+                overflow-y: scroll;
+                overflow-x: hidden;
+                font-family: Luna;
+            }
+            header{
+                box-sizing: border-box;
+                min-height: 100vh;
+                padding: 30vw 0 5vw;
+                position: relative;
+                transform-style: inherit;
+                width: 100vw;
+            }
+            header h1{
+                margin-top: -100px;
+            }
+            header, header::before{
+                background: 50% 50% / cover;
+            }
+            header::before{
+                bottom: 0;
+                content: "";
+                left: 0;
+                position: absolute;
+                right: 0;
+                top: 0;
+                display: block;
+                background-image: url(images/Bangladesh\ Landscape.jpeg);
+                background-size: cover;
+                transform-origin: center center 0;
+                transform: translateZ(-1px) scale(2);
+                z-index: -1;
+                min-height: 100vh;
+            }
+            header *{
+                font-weight: normal;
+                letter-spacing: 0.2em;
+                text-align: center;
+                padding: 1em 0;
+            }
+            section {
+                position: relative;
+                min-height: 100vh;
+                width: 100%;
+                text-align: center;
+                box-sizing: border-box;
+                padding: 20px;
+            }
+            .parallax {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-size: cover;
+                background-attachment: fixed;
+                z-index: -1;
+            }
+            .intro {
+                background-image: url('images/Bangladesh_Landscape.jpeg');
+                background-size: cover;
+                color: white;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+            }
+            h1, p {
+                margin: 0;
+                padding: 1em;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Scenic Beauty of Bangladesh</h1>
+            <p>Bangladesh: A Land of Natural Wonders</p>
+        </header>
+
+        <section>
+            <div class="parallax" style="background-image: url('images/river.jpeg');"></div>
+            <h2>Rivers of Life</h2>
+            <p>Bangladesh is crisscrossed by over 700 rivers, forming the lifeblood of its ecosystem and culture. The Ganges, Brahmaputra, and Meghna rivers create stunning vistas and sustain millions of lives.</p>
+        </section>
+    
+        <section>
+            <div class="parallax" style="background-image: url('images/sundarban.jpeg');"></div>
+            <h2>The Sundarbans - A Mangrove Marvel</h2>
+            <p>The Sundarbans, a UNESCO World Heritage site, is the largest mangrove forest in the world, home to the Royal Bengal Tiger and a variety of unique flora and fauna.</p>
+        </section>
+    
+        <section>
+            <div class="parallax" style="background-image: url('images/bandarban.jpeg');"></div>
+            <h2>Hill Tracts and Waterfalls</h2>
+            <p>The Chittagong Hill Tracts offer rolling green hills, traditional tribal cultures, and mesmerizing waterfalls like Nafakhum and Amiakhum.</p>
+        </section>
+    
+        <section>
+            <div class="parallax" style="background-image: url('images/cox\'s\ bazar.jpeg');"></div>
+            <h2>The Cox’s Bazar Beach</h2>
+            <p>Home to the world’s longest unbroken sandy beach, Cox’s Bazar is a natural wonder with golden sands and azure waters.</p>
+        </section>
+    
+        <section>
+            <div class="parallax" style="background-image: url('images/tea\ garden.jpeg');"></div>
+            <h2>Sylhet’s Tea Gardens and Haors</h2>
+            <p>The tea gardens of Sylhet and the sprawling wetlands known as haors are iconic representations of Bangladesh's natural charm.</p>
+        </section>
+    
+        <section>
+            <div class="parallax" style="background-image: url('images/rural\ bangladesh.jpeg');"></div>
+            <h2>Rural Charm and Paddy Fields</h2>
+            <p>Golden paddy fields and traditional thatched huts dot the serene landscapes of rural Bangladesh, exuding timeless beauty.</p>
+        </section>
+    
+        <section>
+            <div class="parallax" style="background-image: url('images/seasonal\ bangladesh.jpeg');"></div>
+            <h2>Seasons of Splendor</h2>
+            <p>Bangladesh experiences six distinct seasons, each adding its unique touch to the scenery, from spring blossoms to winter’s tranquil beauty.</p>
+        </section>
+    
+        <footer>
+            <p>&copy; 2024 Scenic Beauty of Bangladesh. All Rights Reserved.</p>
+        </footer>
+    </body>
+</html>

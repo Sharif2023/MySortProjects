@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <h1 id="title" class="text-center">UIU Admission Form</h1>
+    <p id="description" class="description-text-center">Quest for excellence!</p>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Center and Style the Title */
+        h1#title {
+            font-size: 2.5rem;
+            color: #ff4d00;
+            text-align: center;
+            margin-top: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+        }
+
+        p#description {
+            text-align: center;
+            font-size: 1.1rem;
+            color: #555;
+            margin: 10px 0 30px;
+        }
+
+        /* Form Container */
+        #survey-form {
+            max-width: 700px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Form Groups */
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-size: 1rem;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="number"],
+        textarea,
+        select {
+            width: 97%;
+            padding: 10px;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-top: 5px;
+            transition: border 0.3s;
+        }
+
+        input:focus,
+        textarea:focus,
+        select:focus {
+            border-color: #ff4d00;
+            outline: none;
+            box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+        }
+
+        /* Radio Buttons and Checkboxes */
+        .input-radio,
+        .input-checkbox {
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        label > input {
+            margin-right: 8px;
+        }
+
+        textarea {
+            resize: vertical;
+            height: 80px;
+            max-width: 97%;
+        }
+
+        /* Dropdown Styling */
+        select {
+            background-color: #fff;
+            cursor: pointer;
+        }
+
+        /* Submit Button */
+        .submit-button {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            background-color: #ff4d00;
+            color: #fff;
+            font-size: 1.1rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .submit-button:hover {
+            background-color: #fc7e00;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1#title {
+                font-size: 2rem;
+            }
+
+            p#description {
+                font-size: 1rem;
+            }
+
+            #survey-form {
+                padding: 15px;
+            }
+        }
+    </style>
+  </head>
+  <body>
+    <form id="survey-form">
+    <div class="form-group">
+      <label id="name-label" for="name" class="active">Name </label>
+      <input id="name" type="text" class="form-control" placeholder="Enter your name" required>
+    </div>
+    <div class="form-group">
+      <label id="email-label" for="email" class="active">Email</label>
+        <input id="email" type="email" class="form-control" placeholder="Enter your Email" name="email" required>
+    </div>
+    <div class="form-group">
+      <label id="number-label" for="number" class="active">Age
+        <span class="clue">
+          (optional)
+        </span>
+      </label>
+        <input id="number" type="number" class="form-control" min="13" max="120" placeholder="Age">
+    </div>
+    <div class="form-group">
+      <p>What is your occupation?</p>
+      <select id="dropdown" name="role" class="form-control" required>
+        <option disable selected value>Select Your Occupation</option>
+        <option value="student">Student</option>
+        <option value="employee">Employee</option>
+        <option value="businessman">Businessman</option>
+        <option value="others">Others</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <p>How do you know about us?</p>
+      <label><input name="user-recommend" value="friend" type="radio" class="input-radio" checked> Friend </label>
+      <label><input name="user-recommend" value="family" type="radio" class="input-radio"> Family </label>
+      <label><input name="user-recommend" value="social-media" type="radio" class="input-radio"> Social Media </label>
+      <label><input name="user-recommend" value="others" type="radio" class="input-radio"> Otehrs </label>
+    </div>
+    <div>
+      <p>What is the the best motivation for you to admitted here?</p>
+      <select id="most-like" name="most-like" class="form-control" required>
+        <option disbled selected value>Choose options from below</option>
+        <option value="faculty">High Skilled Faculty</option>
+        <option value="environment">Beautyful Environment</option>
+        <option value="others">Others</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <p>What kind of skills do you want to develop?
+        <span class="clue">choose all options you need</span>
+      </p>
+      <label>
+        <input type="checkbox" name="prefer" value="c-and-c-plus-plus" class="input-checkbox"> C & C++
+      </label>
+      <label>
+        <input type="checkbox" name="prefer" value="java" class="input-checkbox">Java
+      </label>
+      <label>
+        <input type="checkbox" name="prefer" value="python" class="input-checkbox">Python
+      </label>
+      <label>
+        <input type="checkbox" name="prefer" value="web-development" class="input-checkbox">Web & Design
+      </label>
+      <label>
+        <input type="checkbox" name="prefer" value="networking" class="input-checkbox">Networking
+      </label>
+    </div>
+    <div class="form-group">
+      <p>Any other things you want to develop?</p>
+      <textarea id="comments" class="input-textarea" name="comment" placeholder="Describe your otehr problems here..."></textarea>
+    </div>
+    <div class="form-group">
+      <button class="submit-button" type="submit" id="submit">Submit</button>
+    </div>
+    </form>
+    </div>
+  </body>
+</html>
+

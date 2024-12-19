@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /*CSS Reset*/
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            color: #333;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            margin: 0;
+        }
+
+        header {
+            text-align: center;
+            background: linear-gradient(to right, #ff7e5f, #feb47b);
+            color: white;
+            padding: 1.5rem 0;
+        }
+
+        header h1 {
+            margin-bottom: 0.5rem;
+            font-size: 3rem;
+        }
+
+        header h2 {
+            font-size: 1.5rem;
+        }
+
+        nav {
+            background: #333;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0.5rem 0;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin: 0 1rem;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 0.5rem;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background: #ff7e5f;
+        }
+
+        .hero {
+            background: url(images/restaurent.png) no-repeat center center/cover;
+            height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero button {
+            padding: 0.75rem 2rem;
+            border: none;
+            border-radius: 5px;
+            background: #ff7e5f;
+            color: white;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .hero button:hover {
+            background: #feb47b;
+        }
+
+        .features {
+            display: flex;
+            justify-content: space-around;
+            margin: 2rem 0;
+            padding: 1rem;
+        }
+
+        .features .card {
+            width: 30%;
+            background: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            text-align: center;
+            padding: 1rem;
+            transition: transform 0.3s ease;
+        }
+
+        .features .card:hover {
+            transform: scale(1.05);
+        }
+
+        .features .card img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .features .card button {
+            margin-top: 1rem;
+            padding: 0.5rem 1.5rem;
+            border: none;
+            border-radius: 5px;
+            background: #ff7e5f;
+            color: white;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .features .card button:hover {
+            background: #feb47b;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem 0;
+            background: #333;
+            color: white;
+        }
+
+        @media(max-width: 768px) {
+            .features {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .features .card {
+                width: 80%;
+                margin-bottom: 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Online FoodShop</h1>
+        <h2>Your Gateway to Delicious Meals</h2>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Menu</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="hero">
+        <h2>Welcome to Online FoodShop</h2>
+        <button>Order Now</button>
+    </div>
+
+    <section class="features">
+        <div class="card">
+            <img src="https://media.geeksforgeeks.org/wp-content/uploads/20240711123257/jpeg-optimizer_2151336570.jpg" alt="Prices">
+            <button>Prices</button>
+        </div>
+        <div class="card">
+            <img src="https://media.geeksforgeeks.org/wp-content/uploads/20240711123258/jpeg-optimizer_various-meals-western-food-platter-dark-background.jpg" alt="Featured">
+            <button>Specials</button>
+        </div>
+        <div class="card">
+            <img src="https://media.geeksforgeeks.org/wp-content/uploads/20240711123256/jpeg-optimizer_6656747_21351.jpg" alt="Specials">
+            <button>Order Now</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>Copyright &copy; 2020-2021 Online FoodShop. All Rights Reserved.</p>
+    </footer>
+</body>
+
+</html>

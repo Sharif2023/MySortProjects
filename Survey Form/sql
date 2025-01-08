@@ -1,0 +1,18 @@
+-- Create the database
+CREATE DATABASE IF NOT EXISTS registration_form;
+
+-- Use the created database
+USE registration_form;
+
+-- Create the users table
+
+CREATE TABLE survey_data (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    age INT NOT NULL,
+    occupation VARCHAR(50),
+    radio_ans ENUM('Y', 'N', 'M') NOT NULL, --Yes, --No, --Maybe
+    radio_lang ENUM('c','cpp', 'java', 'py', 'js', 'jsx', 'angular', 'django', 'tailwind', 'bootstrap') NOT NULL,
+    additional_messages VARCHAR(255) NOT NULL
+);

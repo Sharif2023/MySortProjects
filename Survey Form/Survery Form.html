@@ -1,163 +1,186 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width,initial-scale=1.0">
-        <style>
-            @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-            * {
-                margin: 0;
-                padding: 0;
-                box-sizing: border-box;
-            }
-            body {
-                font-family: 'Inter', sans-serif;
-                background-image: url(../images/green-bricks.png);
-            }
-            .img-fluid{
-                max-width: 100%;
-                height: auto;
-                margin-bottom: 45px;
-            }
-            .form-title-input{
-                margin-bottom: 18px;
-                border-color: rgb(0, 136, 241);
-                box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
-            }
-            .form-label{
-                color: #ffffff;
-                font-size: 16px;
-                line-height: 24px;
-                display: block;
-                margin-bottom: 10px;
-            }
-            main{
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                padding: 40px;
-            }
-            .container{
-                margin: 0 auto;
-                background: rgb(179, 47, 47);
-                border-radius: 8px;
-                grid-area: main;
-                height: auto;
-                max-width: 700px;
-                width: 100%;
-                padding: 40px;
-            }
-            .Select-Describe-Option{
-                width: 100%;
-                padding: 12px 12px;
-                border-radius: 5px;
-                border: 1px solid #71bdbd;
-                background: #f0c3c3;
-                font-size: 16px;
-                color: rgb(41, 34, 34);
-                outline: none;
-                resize: none;
-            }
-            input[type="text"],
-            input[type="email"],
-            input[type="number"],
-            select,
-            textarea {
-                width: 100%;
-                padding: 10px 12px;
-                font-size: 16px;
-                border: 1px solid #d1d5db;
-                border-radius: 5px;
-                background-color: #f0c3c3;
-                color: #333;
-                outline: none;
-                transition: all 0.3s ease;
-            }
-            input[type="text"]:focus,
-            input[type="email"]:focus,
-            input[type="number"]:focus,
-            select:focus,
-            textarea:focus {
-                border-color: #2563eb;
-                box-shadow: 0 0 4px rgba(37, 99, 235, 0.3);
-            }
-            .radio-group {
-                position: relative;
-                margin-bottom: 10px;
-            }
-            .radio-label {
-                font-size: 14px;
-                line-height: 24px;
-                color: #c3b3af;
-                position: relative;
-                padding-left: 30px;
-                cursor: pointer;
-            }
-            .radio-label input[type="radio"] {
-                position: absolute;
-                opacity: 0;
-                cursor: pointer;
-            }
-            .radio-label .radio-checkmark {
-                position: absolute;
-                top: 50%;
-                left: 0;
-                transform: translateY(-50%);
-                height: 18px;
-                width: 18px;
-                background-color: #e5e7eb;
-                border-radius: 50%;
-                border: 2px solid #d1d5db;
-                transition: all 0.3s ease;
-            }
-            .radio-label input[type="radio"]:checked ~ .radio-checkmark {
-                background-color: #e80000;
-                border-color: #005825;
-            }
-            .radio-label input[type="radio"]:checked ~ .radio-checkmark:after {
-                content: "";
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                width: 8px;
-                height: 8px;
-                background-color: #ffffff;
-                border-radius: 50%;
-            }
-            textarea {
-                resize: vertical;
-            }
-            .btn-submit {
-                display: inline-block;
-                background-color: #156831;
-                color: #ffffff;
-                font-size: 16px;
-                font-weight: 600;
-                padding: 10px 20px;
-                border: none;
-                border-radius: 5px;
-                cursor: pointer;
-                transition: all 0.3s ease;
-            }
-            .btn-submit:hover {
-                background-color: #55b752;
-            }
-            .form-title-input::placeholder{
-                color: #536387;
-            }
-        </style>
-    </head>
-    <body>
-        <main>
-            <div class="container">
-                <h1></h1>
-                <img src="../../images/surveyformhead.png" class="img-fluid" alt="Responsive image">
-                <br>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-image: url(../images/green-bricks.png);
+        }
+
+        .img-fluid {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 45px;
+        }
+
+        .form-title-input {
+            margin-bottom: 18px;
+            border-color: rgb(0, 136, 241);
+            box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .form-label {
+            color: #ffffff;
+            font-size: 16px;
+            line-height: 24px;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        main {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px;
+        }
+
+        .container {
+            margin: 0 auto;
+            background: rgb(179, 47, 47);
+            border-radius: 8px;
+            grid-area: main;
+            height: auto;
+            max-width: 700px;
+            width: 100%;
+            padding: 40px;
+        }
+
+        .Select-Describe-Option {
+            width: 100%;
+            padding: 12px 12px;
+            border-radius: 5px;
+            border: 1px solid #71bdbd;
+            background: #f0c3c3;
+            font-size: 16px;
+            color: rgb(41, 34, 34);
+            outline: none;
+            resize: none;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="number"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px 12px;
+            font-size: 16px;
+            border: 1px solid #d1d5db;
+            border-radius: 5px;
+            background-color: #f0c3c3;
+            color: #333;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="number"]:focus,
+        select:focus,
+        textarea:focus {
+            border-color: #2563eb;
+            box-shadow: 0 0 4px rgba(37, 99, 235, 0.3);
+        }
+
+        .radio-group {
+            position: relative;
+            margin-bottom: 10px;
+        }
+
+        .radio-label {
+            font-size: 14px;
+            line-height: 24px;
+            color: #c3b3af;
+            position: relative;
+            padding-left: 30px;
+            cursor: pointer;
+        }
+
+        .radio-label input[type="radio"] {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+        }
+
+        .radio-label .radio-checkmark {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            height: 18px;
+            width: 18px;
+            background-color: #e5e7eb;
+            border-radius: 50%;
+            border: 2px solid #d1d5db;
+            transition: all 0.3s ease;
+        }
+
+        .radio-label input[type="radio"]:checked~.radio-checkmark {
+            background-color: #e80000;
+            border-color: #005825;
+        }
+
+        .radio-label input[type="radio"]:checked~.radio-checkmark:after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 8px;
+            height: 8px;
+            background-color: #ffffff;
+            border-radius: 50%;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        .btn-submit {
+            display: inline-block;
+            background-color: #156831;
+            color: #ffffff;
+            font-size: 16px;
+            font-weight: 600;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-submit:hover {
+            background-color: #55b752;
+        }
+
+        .form-title-input::placeholder {
+            color: #536387;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="container">
+            <h1></h1>
+            <img src="../images/surveyformhead.png" class="img-fluid" alt="Responsive image">
+            <br>
+            <form method="post" action="connect.php">
                 <div class="form-title-input">
                     <label class="form-label">Name</label>
                     <input type="text" name="name" id="name" placeholder="Enter you name" class="form">
-                </div> 
+                </div>
                 <div class="form-title-input">
                     <label class="form-label">Email</label>
                     <input type="email" name="email" id="email" placeholder="Enter your email" class="form">
@@ -179,19 +202,22 @@
                     <label class="form-label">Is this UI design good?</label>
                     <div class="radio-flex">
                         <div class="radio-group">
-                            <label class="radio-label"><input class="input-radio" type="radio" name="radio-ans" id="radio-ans">
-                            Yes
-                            <span class="radio-checkmark"></span></label>
+                            <label class="radio-label"><input class="input-radio" type="radio" name="radio_ans"
+                                    id="radio_ans" value="Y">
+                                Yes
+                                <span class="radio-checkmark"></span></label>
                         </div>
                         <div class="radio-group">
-                            <label class="radio-label"><input class="input-radio" type="radio" name="radio-ans" id="radio-ans">
-                            No
-                            <span class="radio-checkmark"></span></label>
+                            <label class="radio-label"><input class="input-radio" type="radio" name="radio_ans"
+                                    id="radio_ans" value="N">
+                                No
+                                <span class="radio-checkmark"></span></label>
                         </div>
                         <div class="radio-group">
-                            <label class="radio-label"><input class="input-radio" type="radio" name="radio-ans" id="radio-ans">
-                            Maybe
-                            <span class="radio-checkmark"></span></label>
+                            <label class="radio-label"><input class="input-radio" type="radio" name="radio_ans"
+                                    id="radio_ans" value="M">
+                                Maybe
+                                <span class="radio-checkmark"></span></label>
                         </div>
                     </div>
                 </div><br>
@@ -199,63 +225,76 @@
                     <label class="form-label">Which Language and Frameworks you know?</label>
                     <div class="radio-flex">
                         <div class="radio-group">
-                            <label class="radio-label"><input class="input-radio" type="radio" name="radio-ans" id="radio-ans">
-                                C
-                            <span class="radio-checkmark"></span></label>
+                            <label class="radio-label"><input class="input-radio" type="radio" name="radio_lang"
+                                    id="radio_lang" value="c">
+                                c
+                                <span class="radio-checkmark"></span></label>
                         </div>
                         <div class="radio-group">
-                            <label class="radio-label"><input class="input-radio" type="radio" name="radio-ans" id="radio-ans">
+                            <label class="radio-label"><input class="input-radio" type="radio" name="radio_lang"
+                                    id="radio_lang" value="cpp">
                                 c++
-                            <span class="radio-checkmark"></span></label>
+                                <span class="radio-checkmark"></span></label>
                         </div>
                         <div class="radio-group">
-                            <label class="radio-label"><input class="input-radio" type="radio" name="radio-ans" id="radio-ans">
-                                Java
-                            <span class="radio-checkmark"></span></label>
+                            <label class="radio-label"><input class="input-radio" type="radio" name="radio_lang"
+                                    id="radio_lang" value="java">
+                                java
+                                <span class="radio-checkmark"></span></label>
                         </div>
                         <div class="radio-group">
-                            <label class="radio-label"><input class="input-radio" type="radio" name="radio-ans" id="radio-ans">
+                            <label class="radio-label"><input class="input-radio" type="radio" name="radio_lang"
+                                    id="radio_lang" value="py">
                                 Python
-                            <span class="radio-checkmark"></span></label>
+                                <span class="radio-checkmark"></span></label>
                         </div>
                         <div class="radio-group">
-                            <label class="radio-label"><input class="input-radio" type="radio" name="radio-ans" id="radio-ans">
+                            <label class="radio-label"><input class="input-radio" type="radio" name="radio_lang"
+                                    id="radio_lang" value="js">
                                 JavaScript
-                            <span class="radio-checkmark"></span></label>
+                                <span class="radio-checkmark"></span></label>
                         </div>
                         <div class="radio-group">
-                            <label class="radio-label"><input class="input-radio" type="radio" name="radio-ans" id="radio-ans">
+                            <label class="radio-label"><input class="input-radio" type="radio" name="radio_lang"
+                                    id="radio_lang" value="jsx">
                                 React
-                            <span class="radio-checkmark"></span></label>
+                                <span class="radio-checkmark"></span></label>
                         </div>
                         <div class="radio-group">
-                            <label class="radio-label"><input class="input-radio" type="radio" name="radio-ans" id="radio-ans">
+                            <label class="radio-label"><input class="input-radio" type="radio" name="radio_lang"
+                                    id="radio_lang" value="angular">
                                 Angular
-                            <span class="radio-checkmark"></span></label>
+                                <span class="radio-checkmark"></span></label>
                         </div>
                         <div class="radio-group">
-                            <label class="radio-label"><input class="input-radio" type="radio" name="radio-ans" id="radio-ans">
+                            <label class="radio-label"><input class="input-radio" type="radio" name="radio_lang"
+                                    id="radio_lang" value="django">
                                 Django
-                            <span class="radio-checkmark"></span></label>
+                                <span class="radio-checkmark"></span></label>
                         </div>
                         <div class="radio-group">
-                            <label class="radio-label"><input class="input-radio" type="radio" name="radio-ans" id="radio-ans">
+                            <label class="radio-label"><input class="input-radio" type="radio" name="radio_lang"
+                                    id="radio_lang" value="tailwind">
                                 Tailwind CSS
-                            <span class="radio-checkmark"></span></label>
+                                <span class="radio-checkmark"></span></label>
                         </div>
                         <div class="radio-group">
-                            <label class="radio-label"><input class="input-radio" type="radio" name="radio-ans" id="radio-ans">
+                            <label class="radio-label"><input class="input-radio" type="radio" name="radio_lang"
+                                    id="radio_lang" value="bootstrap">
                                 Bootstrap
-                            <span class="radio-checkmark"></span></label>
+                                <span class="radio-checkmark"></span></label>
                         </div>
                     </div>
                 </div><br>
                 <div>
-                    <label for="additional-message" class="form-label">Any comments or suggestions</label><br>
-                    <textarea rows="6" name="additional-message" id="additional-message" placeholder="Type here ..." class="form"></textarea>
+                    <label for="additional_messages" class="form-label">Any comments or suggestions</label><br>
+                    <textarea rows="6" name="additional_messages" id="additional_messages" placeholder="Type here ..."
+                        class="form"></textarea>
                 </div>
                 <button type="submit" class="btn-submit">Submit</button>
-            </div>
-        </main>
-    </body>
+            </form>
+        </div>
+    </main>
+</body>
+
 </html>

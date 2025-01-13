@@ -135,17 +135,17 @@
     </style>
   </head>
   <body>
-    <form id="survey-form">
+    <form id="survey-form" method="post" action="connect.php">
     <div class="form-group">
       <label id="name-label" for="name" class="active">Name </label>
-      <input id="name" type="text" class="form-control" placeholder="Enter your name" required>
+      <input id="name" type="text" class="form-control" name="name" placeholder="Enter your name" required>
     </div>
     <div class="form-group">
       <label id="email-label" for="email" class="active">Email</label>
         <input id="email" type="email" class="form-control" placeholder="Enter your Email" name="email" required>
     </div>
     <div class="form-group">
-      <label id="number-label" for="number" class="active">Age
+      <label id="number-label" for="number" class="active" name="age">Age
         <span class="clue">
           (optional)
         </span>
@@ -154,7 +154,7 @@
     </div>
     <div class="form-group">
       <p>What is your occupation?</p>
-      <select id="dropdown" name="role" class="form-control" required>
+      <select id="dropdown" name="role" class="form-control" name="role" required>
         <option disable selected value>Select Your Occupation</option>
         <option value="student">Student</option>
         <option value="employee">Employee</option>
@@ -183,19 +183,19 @@
         <span class="clue">choose all options you need</span>
       </p>
       <label>
-        <input type="checkbox" name="prefer" value="c-and-c-plus-plus" class="input-checkbox"> C & C++
+        <input type="checkbox" name="prefer[]" value="c-and-cpp" class="input-checkbox"> C & C++
       </label>
       <label>
-        <input type="checkbox" name="prefer" value="java" class="input-checkbox">Java
+        <input type="checkbox" name="prefer[]" value="java" class="input-checkbox">Java
       </label>
       <label>
-        <input type="checkbox" name="prefer" value="python" class="input-checkbox">Python
+        <input type="checkbox" name="prefer[]" value="python" class="input-checkbox">Python
       </label>
       <label>
-        <input type="checkbox" name="prefer" value="web-development" class="input-checkbox">Web & Design
+        <input type="checkbox" name="prefer[]" value="web-development" class="input-checkbox">Web & Design
       </label>
       <label>
-        <input type="checkbox" name="prefer" value="networking" class="input-checkbox">Networking
+        <input type="checkbox" name="prefer[]" value="networking" class="input-checkbox">Networking
       </label>
     </div>
     <div class="form-group">

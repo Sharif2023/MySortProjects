@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Distribution Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+
+        .navbar {
+            background-color: #a83232;
+            padding: 15px;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        .search-panel {
+            background-color: #ffffff;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        .search-panel input, .search-panel select, .search-panel button {
+            padding: 10px;
+            margin: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .request-summary {
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            padding: 15px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table th, table td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+
+        table th {
+            background-color: #a83232;
+            color: white;
+        }
+
+        .inventory {
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 15px;
+        }
+
+        .footer {
+            background-color: #343a40;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+
+        .btn {
+            padding: 5px 10px;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .btn-approve {
+            background-color: #28a745;
+        }
+
+        .btn-deny {
+            background-color: #dc3545;
+        }
+
+        .btn-dispatch {
+            background-color: #ffc107;
+        }
+
+        .btn:hover {
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div>Blood Bank</div>
+        <div>
+            <a href="#">Home</a>
+            <a href="#">Blood Inventory</a>
+            <a href="#">Distribution Requests</a>
+            <a href="#">Testing Results</a>
+            <a href="#">Reports</a>
+            <a href="#">Contact</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="search-panel">
+            <h3>Search Panel</h3>
+            <input type="text" placeholder="Search Hospital">
+            <select>
+                <option value="">Select Blood Type</option>
+                <option value="A+">A+</option>
+                <option value="B+">B+</option>
+                <option value="O+">O+</option>
+                <option value="AB+">AB+</option>
+            </select>
+            <button>Search</button>
+        </div>
+
+        <div class="request-summary">
+            <h3>Request Summary</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Hospital Name</th>
+                        <th>Requested Blood Units</th>
+                        <th>Blood Type</th>
+                        <th>Priority</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>City Hospital</td>
+                        <td>5</td>
+                        <td>A+</td>
+                        <td>High</td>
+                        <td>
+                            <button class="btn btn-approve">Approve</button>
+                            <button class="btn btn-deny">Deny</button>
+                            <button class="btn btn-dispatch">Dispatch</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>General Clinic</td>
+                        <td>3</td>
+                        <td>B+</td>
+                        <td>Medium</td>
+                        <td>
+                            <button class="btn btn-approve">Approve</button>
+                            <button class="btn btn-deny">Deny</button>
+                            <button class="btn btn-dispatch">Dispatch</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="inventory">
+            <h3>Current Inventory</h3>
+            <p>A+: 10 units</p>
+            <p>B+: 7 units</p>
+            <p>O+: 5 units (Low)</p>
+            <p>AB+: 12 units</p>
+        </div>
+    </div>
+
+    <div class="footer">
+        &copy; 2025 Blood Bank. All rights reserved.
+    </div>
+</body>
+</html>

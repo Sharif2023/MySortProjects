@@ -1,24 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blood Distribution Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Righteous&display=swap"
+        rel="stylesheet">
+
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: "DM Sans", serif;
             margin: 0;
             padding: 0;
             background-color: #f8f9fa;
+            font-optical-sizing: auto;
+            font-style: normal;
         }
 
         .navbar {
-            background-color: #a83232;
+            background-color: #343a40;
             padding: 15px;
             color: white;
             display: flex;
             justify-content: space-between;
             align-items: center;
+        }
+
+        .header-title {
+            font-size: 2.5rem;
+            color: red;
+            font-weight: bold;
+            position: relative;
+            display: flex;
+            gap: 2px;
+        }
+
+        .header-title span {
+            position: relative;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+            display: inline-block;
+        }
+
+        .header-title span::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: -5px;
+            transform: translateX(-50%);
+            width: 2px;
+            height: 10px;
+            background: red;
+            border-radius: 50%;
+            opacity: 0;
+            animation: drip 1.5s infinite ease-in-out;
+            animation-delay: calc(var(--i) * 0.2s);
+            /* Staggered delay */
+        }
+
+        .header-title span:nth-child(1) {
+            --i: 0;
+        }
+
+        .header-title span:nth-child(2) {
+            --i: 1;
+        }
+
+        .header-title span:nth-child(3) {
+            --i: 2;
+        }
+
+        .header-title span:nth-child(4) {
+            --i: 3;
+        }
+
+        .header-title span:nth-child(5) {
+            --i: 4;
+        }
+
+        .header-title span:nth-child(6) {
+            --i: 5;
+        }
+
+        .header-title span:nth-child(7) {
+            --i: 6;
+        }
+
+        .header-title span:nth-child(8) {
+            --i: 7;
+        }
+
+        .header-title span:nth-child(9) {
+            --i: 8;
+        }
+
+        @keyframes drip {
+            0% {
+                height: 10px;
+                opacity: 1;
+            }
+
+            50% {
+                height: 15px;
+                opacity: 0.8;
+            }
+
+            100% {
+                height: 0;
+                opacity: 0;
+            }
         }
 
         .navbar a {
@@ -28,7 +121,7 @@
         }
 
         .navbar a:hover {
-            text-decoration: underline;
+            color: red;
         }
 
         .container {
@@ -43,11 +136,21 @@
             margin-bottom: 20px;
         }
 
-        .search-panel input, .search-panel select, .search-panel button {
+        .search-panel input,
+        .search-panel select {
             padding: 10px;
             margin: 5px;
             border: 1px solid #ccc;
             border-radius: 5px;
+        }
+
+        .search-button {
+            background-color: red;
+            color: #ffffff;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 20px;
         }
 
         .request-summary {
@@ -63,14 +166,15 @@
             border-collapse: collapse;
         }
 
-        table th, table td {
+        table th,
+        table td {
             border: 1px solid #ddd;
             padding: 10px;
             text-align: left;
         }
 
         table th {
-            background-color: #a83232;
+            background-color: red;
             color: white;
         }
 
@@ -114,9 +218,13 @@
         }
     </style>
 </head>
+
 <body>
     <div class="navbar">
-        <div>Blood Bank</div>
+        <div class="header-title">
+            <span>B</span><span>l</span><span>o</span><span>o</span><span>d</span>
+            <span>B</span><span>a</span><span>n</span><span>k</span>
+        </div>
         <div>
             <a href="#">Home</a>
             <a href="#">Blood Inventory</a>
@@ -138,7 +246,11 @@
                 <option value="O+">O+</option>
                 <option value="AB+">AB+</option>
             </select>
-            <button>Search</button>
+            <button class="search-button"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                    fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                    <path
+                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                </svg> Search</button>
         </div>
 
         <div class="request-summary">
@@ -193,4 +305,5 @@
         &copy; 2025 Blood Bank. All rights reserved.
     </div>
 </body>
+
 </html>

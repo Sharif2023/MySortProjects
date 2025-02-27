@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ramadan 2025 - Details</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Background container */
+        .bg-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-image: url('images/bg.jpg');
+            background-size: cover;
+            background-position: center;
+            z-index: -1;
+            animation: zoomMove 30s infinite alternate ease-in-out;
+        }
+
+        /* Enhanced Animation */
+        @keyframes zoomMove {
+            0% { transform: scale(1.1) translate(0, 0); }
+            25% { transform: scale(1.2) translate(-10px, -10px); }
+            50% { transform: scale(1.15) translate(20px, 20px); }
+            75% { transform: scale(1.2) translate(-10px, 15px); }
+            100% { transform: scale(1.1) translate(0, 0); }
+        }
+    </style>
+</head>
+
+<body class="flex items-center justify-center min-h-screen relative">
+
+    <!-- Background Animation -->
+    <div class="bg-container"></div>
+
+    <div class="bg-white bg-opacity-90 shadow-lg rounded-lg p-6 max-w-md w-full text-center relative z-10">
+        <h1 class="text-2xl font-bold text-gray-800 mb-4">Ramadan 2025 - Day Details</h1>
+
+        <div class="space-y-4">
+            <!-- Day & Date Section -->
+            <div class="p-4 bg-gray-50 rounded-lg shadow-sm grid grid-cols-2 gap-4">
+                <div class="bg-white p-3 rounded-md shadow">
+                    <p class="text-lg font-semibold text-gray-700">Day: <span id="day" class="text-blue-600"></span></p>
+                </div>
+                <div class="bg-white p-3 rounded-md shadow">
+                    <p class="text-lg font-semibold text-gray-700">Date: <span id="date" class="text-blue-600"></span></p>
+                </div>
+            </div>
+        
+            <!-- Sehri & Iftar Section -->
+            <div class="p-4 bg-gray-50 rounded-lg shadow-sm grid grid-cols-2 gap-4">
+                <div class="bg-white p-3 rounded-md shadow">
+                    <p class="text-lg font-semibold text-gray-700">Sehri Time: <br><span id="sehri" class="text-green-600"></span></p>
+                </div>
+                <div class="bg-white p-3 rounded-md shadow">
+                    <p class="text-lg font-semibold text-gray-700">Iftar Time: <br><span id="iftar" class="text-red-600"></span></p>
+                </div>
+            </div>
+        </div>
+
+        <a href="calender.html" class="block mt-6 text-blue-500 hover:underline">Back to Calendar</a>
+    </div>
+
+    <script>
+        // Sample data (You will replace this dynamically)
+        const dayData = {
+            day: 1,
+            date: "02 Mar 2025",
+            sehri: "05:03 AM",
+            iftar: "6:03 PM"
+        };
+
+        document.getElementById("day").textContent = dayData.day;
+        document.getElementById("date").textContent = dayData.date;
+        document.getElementById("sehri").textContent = dayData.sehri;
+        document.getElementById("iftar").textContent = dayData.iftar;
+    </script>
+
+</body>
+
+</html>

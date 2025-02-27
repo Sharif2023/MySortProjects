@@ -23,11 +23,25 @@
 
         /* Enhanced Animation */
         @keyframes zoomMove {
-            0% { transform: scale(1.1) translate(0, 0); }
-            25% { transform: scale(1.2) translate(-10px, -10px); }
-            50% { transform: scale(1.15) translate(20px, 20px); }
-            75% { transform: scale(1.2) translate(-10px, 15px); }
-            100% { transform: scale(1.1) translate(0, 0); }
+            0% {
+                transform: scale(1.1) translate(0, 0);
+            }
+
+            25% {
+                transform: scale(1.2) translate(-10px, -10px);
+            }
+
+            50% {
+                transform: scale(1.15) translate(20px, 20px);
+            }
+
+            75% {
+                transform: scale(1.2) translate(-10px, 15px);
+            }
+
+            100% {
+                transform: scale(1.1) translate(0, 0);
+            }
         }
     </style>
 </head>
@@ -37,43 +51,58 @@
     <!-- Background Animation -->
     <div class="bg-container"></div>
 
-    <div class="bg-white bg-opacity-90 shadow-lg rounded-lg p-6 max-w-md w-full text-center relative z-10">
-        <h1 class="text-2xl font-bold text-gray-800 mb-4">Ramadan 2025 - Day Details</h1>
+    <div class="bg-white bg-opacity-50 shadow-lg rounded-lg p-6 max-w-md w-full text-center relative z-10">
+        <h1 class="text-2xl font-serif font-bold text-center mb-4 flex items-center justify-center gap-2">Ramadan Calendar 2025 
+            <a href="calender.html">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.7" stroke="currentColor" class="w-8 h-8 text-blue-600 animate-pulse hover:text-[#ff3300]">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 2.994v2.25m10.5-2.25v2.25m-14.252 13.5V7.491a2.25 2.25 0 0 1 2.25-2.25h13.5a2.25 2.25 0 0 1 2.25 2.25v11.251m-18 0a2.25 2.25 0 0 0 2.25 2.25h13.5a2.25 2.25 0 0 0 2.25-2.25m-18 0v-7.5a2.25 2.25 0 0 1 2.25-2.25h13.5a2.25 2.25 0 0 1 2.25 2.25v7.5m-6.75-6h2.25m-9 2.25h4.5m.002-2.25h.005v.006H12v-.006Zm-.001 4.5h.006v.006h-.006v-.005Zm-2.25.001h.005v.006H9.75v-.006Zm-2.25 0h.005v.005h-.006v-.005Zm6.75-2.247h.005v.005h-.005v-.005Zm0 2.247h.006v.006h-.006v-.006Zm2.25-2.248h.006V15H16.5v-.005Z" />
+            </svg></a>
+        </h1>
+        
 
         <div class="space-y-4">
             <!-- Day & Date Section -->
-            <div class="p-4 bg-gray-50 rounded-lg shadow-sm grid grid-cols-2 gap-4">
+            <div class="p-4 bg-blue-950 bg-opacity-70 rounded-lg shadow-sm grid grid-cols-2 gap-4">
                 <div class="bg-white p-3 rounded-md shadow">
-                    <p class="text-lg font-semibold text-gray-700">Day: <span id="day" class="text-blue-600"></span></p>
+                    <p class="text-lg font-serif font-semibold text-gray-700">Day: <br><span id="day" class="text-blue-600"></span></p>
                 </div>
                 <div class="bg-white p-3 rounded-md shadow">
-                    <p class="text-lg font-semibold text-gray-700">Date: <span id="date" class="text-blue-600"></span></p>
+                    <p class="text-lg font-serif font-semibold text-gray-700">Date: <br><span id="date" class="text-blue-600"></span>
+                    </p>
                 </div>
             </div>
-        
+
             <!-- Sehri & Iftar Section -->
-            <div class="p-4 bg-gray-50 rounded-lg shadow-sm grid grid-cols-2 gap-4">
+            <div class="p-4 bg-blue-950 rounded-lg bg-opacity-70 shadow-sm grid grid-cols-2 gap-4">
                 <div class="bg-white p-3 rounded-md shadow">
-                    <p class="text-lg font-semibold text-gray-700">Sehri Time: <br><span id="sehri" class="text-green-600"></span></p>
+                    <p class="text-lg font-serif font-semibold text-gray-700">Sehri Time: <br><span id="sehri"
+                            class="text-green-600"></span></p>
                 </div>
                 <div class="bg-white p-3 rounded-md shadow">
-                    <p class="text-lg font-semibold text-gray-700">Iftar Time: <br><span id="iftar" class="text-red-600"></span></p>
+                    <p class="text-lg font-serif font-semibold text-gray-700">Iftar Time: <br><span id="iftar"
+                            class="text-red-600"></span></p>
                 </div>
             </div>
         </div>
 
-        <a href="calender.html" class="block mt-6 text-blue-500 hover:underline">Back to Calendar</a>
     </div>
 
     <script>
-        // Sample data (You will replace this dynamically)
-        const dayData = {
-            day: 1,
-            date: "02 Mar 2025",
-            sehri: "05:03 AM",
-            iftar: "6:03 PM"
-        };
+        // Function to get query parameters from URL
+        function getQueryParams() {
+            const params = new URLSearchParams(window.location.search);
+            return {
+                day: params.get("day"),
+                date: params.get("date"),
+                sehri: params.get("sehri"),
+                iftar: params.get("iftar"),
+            };
+        }
 
+        // Get the data from URL
+        const dayData = getQueryParams();
+
+        // Set the details in HTML
         document.getElementById("day").textContent = dayData.day;
         document.getElementById("date").textContent = dayData.date;
         document.getElementById("sehri").textContent = dayData.sehri;

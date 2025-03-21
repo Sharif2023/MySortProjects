@@ -1,26 +1,20 @@
-* {
+*{
     margin: 0;
     padding: 0;
 }
 
-h1 {
-    font-size: 26px;
-    color: #ff3300;
-    margin-bottom: 20px;
-}
-
-#parentdiv {
+#parentdiv{
     display: flex;
     width: 100vw;
     height: 100vh;
     justify-content: center;
     align-items: center;
-    font-family: Verdana, Helvetica, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: larger;
     background-image: url(https://media.istockphoto.com/id/1385697168/vector/abstract-futuristic-background-with-hexagons-dark-sci-fi-hi-tech-wallpaper-with-red-lights.jpg?s=612x612&w=0&k=20&c=gQuzkllUOBB4x0_phnGHaC1wooBFUYI8GRftQLv0GuI=);
 }
 
-#div1 {
+#div1{
     width: 400px;
     padding: 30px;
     background: rgba(31, 31, 31, 0.9);
@@ -29,20 +23,26 @@ h1 {
     text-align: center;
 }
 
-.input-group {
+h1{
+    font-size: 26px;
+    color: #ff3300;
+    margin-bottom: 20px;
+}
+
+.input-group{
     display: flex;
     flex-direction: column;
     text-align: left;
     margin-bottom: 15px;
 }
 
-label {
+label{
     color: #ff3300;
     font-weight: 600;
     margin-bottom: 5px;
 }
 
-input {
+input{
     width: 100%;
     padding: 10px;
     border-radius: 6px;
@@ -53,12 +53,11 @@ input {
     outline: none;
 }
 
-input::placeholder {
+input::placeholder{
     color: rgba(255, 255, 255, 0.6);
 }
 
-/* Forgot Password Link */
-.forgot-password {
+.forgot-password{
     display: inline-block;
     margin: 10px 0;
     color: #ff3300;
@@ -66,12 +65,11 @@ input::placeholder {
     font-size: 14px;
 }
 
-.forgot-password:hover {
+.forgot-password:hover{
     text-decoration: underline;
 }
 
-/* Button */
-.signup-button {
+.signup-button{
     width: 100%;
     padding: 12px;
     background: #ff3300;
@@ -84,7 +82,7 @@ input::placeholder {
     transition: 0.3s ease-in-out;
 }
 
-.signup-button:hover {
+.signup-button:hover{
     background: #cc2900;
     transform: scale(1.05);
 }

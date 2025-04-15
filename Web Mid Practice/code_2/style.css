@@ -1,0 +1,166 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+nav{
+    height: 10vh;
+    width: 90vw;
+    display: flex;
+    position: fixed;
+    margin: 0 4rem;
+    justify-content: space-between;
+    background-color: #1f1f1f;
+    color: white;
+    align-items: center;
+}
+
+#nav-links ul{
+    display: flex;
+    gap: 1rem;
+}
+
+#nav-links ul li a{
+    text-decoration: none;
+    color: white;
+}
+#nav-links li{
+    list-style: none;
+}
+
+#nav-links #active{
+    color: rgb(255, 115, 0);;
+}
+
+#nav-links ul li select{
+    border: none;
+    color: white;
+    background-color: #1f1f1f;
+    font-size: medium;
+}
+
+#nav-button button{
+    height: 10vh;
+    width: 20vh;
+    color: white;
+    background-color: rgb(255, 115, 0);
+    border: none;
+    margin-right: 30px;
+}
+
+#logo{
+    height: 28px;
+    width: 28px;
+    fill: rgb(255, 115, 0);
+}
+
+#features{
+    display: flex;
+    padding: 15vh 0;
+    margin: 0 10rem;
+    gap: 10px;
+}
+
+#cards{
+    display: grid;
+    height: 40vh;
+    width: 25vw;
+    box-shadow: 2px 4px 4px 2px rgba(0,0,0,0.35);
+    border-radius: 5px;
+    padding: 10px;
+}
+
+#cards h1{
+    font-size: medium;
+    padding: 10px 0;
+}
+
+#details{
+    display: flex;
+    padding: 0 10rem;
+}
+
+#food-container{
+    display: grid;
+    width: 50vw;
+}
+
+#row1, #row2{
+    display: flex;
+}
+
+#img1,#img2, #img3, #img4{
+    height: 150px;
+    width: 150px;
+    padding: 10px;
+}
+
+#img1 img,#img4 img{
+    height: 150px;
+    width: 150px;
+}
+#img2 img,#img3 img{
+    height: 100px;
+    width: 100px;
+}
+
+#img2 img{
+    padding: 50px 50px 0 0;
+}
+#img3 img{
+    padding: 0 0 50px 50px ;
+}
+
+#about{
+    display: grid;
+    width: 50vw;
+}
+
+#about #a-us{
+    color: rgb(255, 115, 0);
+}
+
+#stats, #st{
+    display: flex;
+    padding-bottom: 10px;
+}
+#st{
+    width: 25vw;
+}
+#day{
+    width: 12.5vw;
+    color: rgb(255, 115, 0);
+    font-size: x-large;
+    font-weight: bold;
+    border-left: 4px solid rgb(255, 115, 0);
+    padding: 5px;
+}
+
+#about button{
+    height: 40px;
+    width: 150px;
+    color: white;
+    background-color: rgb(255, 115, 0);
+    border: none;
+}
+
+#s-day #bold{
+    font-weight: bold;
+}
+
+#up-arrow{
+    position: fixed;
+    height: 40px;
+    width: 40px;
+    background-color: rgb(255, 115, 0);
+    color: white;
+    text-align: center;
+    bottom: 0;
+    justify-content: flex-end;
+    margin-left: 90vw;
+    margin-bottom: 10vh;
+}

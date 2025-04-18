@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+#top-nav{
+    display: flex;
+    justify-content: space-between;
+    background-color: #F5F3F5;
+    align-items: center;
+    height: 8vh;
+    padding: 0 20px;
+}
+
+#header-logo{
+    width: 50vw;
+}
+
+#search-box input{
+    height: 5vh;
+    width: 20vw;
+    border: 1px solid black;
+    box-sizing: border-box;
+    border-radius: 3px;
+    font-size: large;
+    background-image: url('asset/search_icon.png');
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+    padding-left: 30px;
+    background-position: 5px center;
+    
+}

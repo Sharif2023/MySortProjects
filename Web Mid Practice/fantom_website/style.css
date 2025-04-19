@@ -10,8 +10,10 @@
     background-color: #F5F3F5;
     align-items: center;
     height: 8vh;
+    width: 98vw;
     padding: 0 20px;
     position: fixed;
+    border-bottom: 1px solid rgb(209, 209, 209);
 }
 
 #header-logo{
@@ -61,9 +63,37 @@
     width: 8vw;
     border-radius: 3px;
     font-weight: 800;
+    margin-right: 20px;
 }
 #signin-btn svg{
     height: 24px;
     width: 24px;
     padding: 0 5px 0 10px;
+}
+
+#main{
+    display: flex;
+}
+
+#left-nav{
+    margin-top: 8vh;
+    height: 92vh;
+    width: 3.5vw;
+    background-color: #F5F3F5;
+    padding: 20px 10px;
+    font-family: monospace;
+    font-size: smaller;
+    text-align: center;
+    display: grid;
+}
+
+#left-nav ul li{
+    list-style: none;
+    padding-bottom: 25px;
+}
+
+#left-nav ul li svg{
+    height: 32px;
+    width: 32px;
+    padding: 5px;
 }

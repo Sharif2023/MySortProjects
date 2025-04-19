@@ -11,6 +11,7 @@
     align-items: center;
     height: 8vh;
     padding: 0 20px;
+    position: fixed;
 }
 
 #header-logo{
@@ -18,8 +19,8 @@
 }
 
 #search-box input{
-    height: 5vh;
-    width: 20vw;
+    height: 6vh;
+    width: 25vw;
     border: 1px solid black;
     box-sizing: border-box;
     border-radius: 3px;
@@ -30,4 +31,39 @@
     padding-left: 30px;
     background-position: 5px center;
     
+}
+
+#add-wiki button{
+    color: #1E0C1B;
+    font-weight: bolder;
+    display: flex;
+    align-items: center;
+    height: 6.5vh;
+}
+
+#add-wiki svg{
+    width: 20px;
+    height: 20px;
+    stroke-width: 3;
+    color: #1E0C1B;
+}
+
+#add-wiki button:hover{
+    background-color: #E9E7E8;
+}
+
+#signin-btn button{
+    background-color: #520044;
+    color: white;
+    display: flex;
+    align-items: center;
+    height: 6.5vh;
+    width: 8vw;
+    border-radius: 3px;
+    font-weight: 800;
+}
+#signin-btn svg{
+    height: 24px;
+    width: 24px;
+    padding: 0 5px 0 10px;
 }
